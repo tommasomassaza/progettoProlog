@@ -27,17 +27,13 @@ inserisci_(Elemento,Posizione,[HeadS|TailS],[HeadS|TailS_Nuovo],Indice):-
 
 escludo(_,[],[]):-
     !.
-escludo(Soglia, [Head|Tail], [NHead|NTail]):-
+escludo(Soglia, [Head|Tail], [Head|NTail]):-
     Head > Soglia,
     !,
-    NHead is Head,
     escludo(Soglia, Tail, NTail).
 escludo(Soglia, [_|Tail], NTail):-
     escludo(Soglia, Tail, NTail).
 
 
 
-primoElemento([Head|_],PrimoElemento):-
-    PrimoElemento is Head.
-
-
+primoElemento([PrimoElemento|_],PrimoElemento).

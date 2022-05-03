@@ -1,1 +1,0 @@
-:- ['dominio.pl', 'euristica.pl', 'lib.pl', 'regole.pl', 'ricerca.pl'].
